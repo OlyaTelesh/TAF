@@ -5,4 +5,9 @@ public class AUnitTest extends BaseTest{
     public void firstTest() {
         System.out.println("Hello world");
     }
+
+@Test
+    public void test() {
+        System.out.println("Test is runing");
+    }
 }

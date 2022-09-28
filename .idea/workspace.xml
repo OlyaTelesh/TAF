@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10387443-c90c-42a4-8733-df5c4c5db1d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CalcTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Data/StaticProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/DependencyTest.java" afterDir="false" />
+    <list default="true" id="10387443-c90c-42a4-8733-df5c4c5db1d2" name="Changes" comment="testng1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Listener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Retry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GroupsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ParamTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PriorityTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/RetryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/general.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/group.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/parallel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/param.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/TAF/src/test/java/Data",
+    "last_opened_file_path": "C:/TAF/src/main/java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -58,16 +60,27 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\TAF\src\test\java\Data" />
+      <recent name="C:\TAF\src\main\java" />
+      <recent name="C:\TAF\src\test\resources" />
       <recent name="C:\TAF\src\test\java" />
+      <recent name="C:\TAF\src\test\java\Data" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DependencyTest">
-    <configuration name="BaseTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.C:/TAF/src/test/resources/parallel.xml">
+    <configuration name="C:/TAF/src/test/resources/parallel.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAF" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BaseTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/parallel.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/TAF/src/test/resources/param.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TAF" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/param.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -109,10 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/TAF/src/test/resources/parallel.xml" />
+        <item itemvalue="TestNG.C:/TAF/src/test/resources/param.xml" />
         <item itemvalue="TestNG.DependencyTest" />
         <item itemvalue="TestNG.CalcTest.testSum3" />
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.BaseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -125,6 +139,14 @@
       <option name="presentableId" value="Default" />
       <updated>1664204814918</updated>
     </task>
+    <task id="LOCAL-00001" summary="testng">
+      <created>1664380153281</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664380153281</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,10 +154,21 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="testng" />
+    <MESSAGE value="testng1" />
+    <option name="LAST_COMMIT_MESSAGE" value="testng1" />
   </component>
 </project>
