@@ -1,20 +1,23 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DependencyTest {
+public class DependencyTest extends BaseTest{
 
     @Test
-    public void stepb() {System.out.println("stepb...");}
-
-    @Test (dependsOnMethods = "stepb")
-    public void stepa() {
-        System.out.println("stepa...");
-        Assert.assertTrue(false);
+    public void number2() {
+        System.out.println("Результат от деления чисел равен: " + calculator.div(2.4,1.0));
     }
 
-    @Test (dependsOnMethods = "stepa", alwaysRun = true)
-    public void stepd() {System.out.println("stepd...");}
+    @Test
+    public void number1() {
+        System.out.println("Результат от деления чисел равен: " + calculator.div(2,3));
+    }
 
-    @Test (dependsOnMethods = {"stepd", "stepa"})
-    public void stepc() {System.out.println("stepc...");}
+    @Test (dependsOnMethods = "number1", alwaysRun = true)
+    public void number4() {
+        System.out.println("метод Number1 выполнен без ошибок");}
+
+    @Test (dependsOnMethods = {"number1", "number2"})
+    public void number3() {
+        System.out.println("Методы number1 и number2 выполнены успешно");}
 }
