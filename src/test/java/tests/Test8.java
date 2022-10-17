@@ -43,6 +43,37 @@ public class Test8 {
         driver.findElement(By.partialLinkText("RIPTION")); //поиск элемента по partialLinkText
 
 
+        driver.findElement(By.xpath("//*[@class='inventory_item_price']")); // Поиск по атрибуту, например By.xpath("//tag[@attribute='value']");
+        driver.findElement(By.xpath("//*[text()='Sauce Labs Backpack']"));// Поиск по тексту, например By.xpath("//tag[text()='text']");
+        driver.findElement(By.xpath("//*[contains(@name,'remove-')"));//Поиск по частичному совпадению атрибута, например By.xpath("//tag[contains(@attribute,'text')]");
+        driver.findElement(By.xpath("//*[contains(text(),'DESCRIPTION')]")); //Поиск по частичному совпадению текста, например By.xpath("//tag[contains(text(),'text')]");
+        driver.findElement(By.xpath("//*[@class='title']/ancestor::div")); //ancestor, например //*[text()='Enterprise Testing']//ancestor::div
+        driver.findElement(By.xpath("//*[@class='btn btn_action btn_medium checkout_button' and @id='checkout']")); // поиск элемента с условием AND, например //input[@class='_2zrpKA _1dBPDZ' and @type='text']
+
+
+        driver.findElement(By.cssSelector(".btn_action")).click();
+        driver.findElement(By.cssSelector(".btn_action.btn_medium")).click();
+        driver.findElement(By.cssSelector("#continue-shopping")).click();
+        driver.findElement(By.cssSelector("div"));
+        driver.findElement(By.cssSelector("div.page_wrapper"));
+        driver.findElement(By.cssSelector("[style='position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; font-size: 0px; background: transparent; cursor: pointer;'"));
+        driver.findElement(By.cssSelector("[data-test~='remove-sauce-labs-backpack'"));
+        driver.findElement(By.cssSelector("[name |=remove-sauce-labs-backpack]"));
+        driver.findElement(By.cssSelector("[name ^=r]"));
+        driver.findElement(By.cssSelector("[name $=pack]"));
+        driver.findElement(By.cssSelector("[name *=pack]"));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
