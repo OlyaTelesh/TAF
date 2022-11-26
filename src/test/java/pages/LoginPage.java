@@ -1,6 +1,6 @@
 package pages;
 
-import baseEntities.BasePage;
+import baseEnteties.BasePage;
 import configuration.ReadProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,13 +23,23 @@ public class LoginPage extends BasePage {
     }
 
     // Блок атомарных методов
-    public WebElement getEmailInput() { return driver.findElement(emailInputLocator); }
-    public WebElement getPswInput() { return driver.findElement(pswInputLocator); }
-    public WebElement getLoginButton() { return driver.findElement(loginButtonLocator); }
+    public WebElement getEmailInput() {
+        return driver.findElement(emailInputLocator); }
 
-    public void setEmail(String value) { getEmailInput().sendKeys(value); }
-    public void setPsw(String value) { getPswInput().sendKeys(value); }
-    public void clickLoginButton() { getLoginButton().click(); }
+    public WebElement getPswInput() {
+        return driver.findElement(pswInputLocator); }
+    public WebElement getLoginButton() {
+        return driver.findElement(loginButtonLocator); }
+
+    public void setEmail(String value) {
+        getEmailInput().sendKeys(value);
+    }
+    public void setPsw(String value) {
+        getPswInput().sendKeys(value);
+    }
+    public void clickLoginButton() {
+        getLoginButton().click();
+    }
 
     public void loginSuccessful(String email, String psw) {
         setEmail(email);

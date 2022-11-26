@@ -1,8 +1,7 @@
 package tests;
 
-import baseEntities.BaseTest;
+import baseEnteties.BaseTest;
 import configuration.ReadProperties;
-import org.graalvm.compiler.graph.Node;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,10 +11,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
 import pages.LoginPage;
+import pages.TopMenuPage;
 import services.BrowsersService;
 
 public class LoginTest extends BaseTest {
-
     @Test
     public void successLoginTest() {
         LoginPage loginPage = new LoginPage(driver);

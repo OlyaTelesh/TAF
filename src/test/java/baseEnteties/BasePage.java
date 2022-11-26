@@ -1,4 +1,4 @@
-package baseEntities;
+package baseEnteties;
 
 import configuration.ReadProperties;
 import org.openqa.selenium.By;
@@ -8,16 +8,19 @@ public abstract class BasePage {
     protected WebDriver driver;
 
     public BasePage(WebDriver driver) {
+
         this.driver = driver;
     }
 
     protected abstract By getPageIdentifier();
 
     public boolean isPageOpened() {
+
         return driver.findElement(getPageIdentifier()).isDisplayed();
     }
 
     public void openPageByUrl(String pagePath) {
+
         driver.get(ReadProperties.getUrl() + pagePath);
     }
 }
