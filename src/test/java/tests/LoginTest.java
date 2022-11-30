@@ -5,22 +5,24 @@ import configuration.ReadProperties;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import pages.MenuPage;
+import steps.LoginStep;
+
+import java.awt.*;
 
 public class LoginTest extends BaseTest {
     @Test
     public void successLoginTest() {
-        LoginPage loginPage = new LoginPage(driver);
 
-        loginPage.loginSuccessful(ReadProperties.username(), ReadProperties.password());
-
-        Assert.assertTrue(new DashboardPage(driver).isPageOpened());
+        loginStep.login(ReadProperties.username(), ReadProperties.password());
+        Assert.assertTrue(new MenuPage(driver).isPageOpened());
     }
-
     @Test
     public void incorrectUsernameTest() {
-        // Какие-то действия
+        // Используется неправильное имя пользователя
+        loginStep.loginIncorrect(ReadProperties.usernameWrong(), ReadProperties.password());
+        Assert.assertTrue(new MenuPage(driver).isPageOpened());
 
-        DashboardPage dashboardPage = new DashboardPage(driver);
     }
 
     @Test

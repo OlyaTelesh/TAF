@@ -11,7 +11,9 @@ public class MenuPage extends BasePage {
 
     private final By twitterClick = By.linkText("Twitter");
     private final By facebookClick = By.linkText("Facebook");
-    private final By linkdimClick = By.linkText("LinkedIn");
+    private final By linkdinClick = By.linkText("LinkedIn");
+
+    private final By shoppingCartLink = By.className("shopping_cart_link");
 
     // Блок инициализации страницы
     public MenuPage(WebDriver driver) {
@@ -35,12 +37,19 @@ public class MenuPage extends BasePage {
     }
 
     public WebElement getLinkInClick() {
-        return driver.findElement(linkdimClick);
+        return driver.findElement(linkdinClick);
     }
 
     public void linkedInClick() {
         getLinkInClick().click();
     }
+
+    public WebElement getshoppingCartLink() {
+        return driver.findElement(shoppingCartLink);
+    }
+        public void shoppingCartLinkClick() {
+            getshoppingCartLink().click();
+        }
 
     @Override
     protected By getPageIdentifier() {

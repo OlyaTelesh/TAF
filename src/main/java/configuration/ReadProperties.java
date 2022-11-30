@@ -24,11 +24,24 @@ public class ReadProperties {
     }
 
     public static String username() {
-        return properties.getProperty("username");
+        return properties.getProperty("usernameRight");
+    }
+
+    public static String usernameWrong() {
+        return properties.getProperty("usernameWithWrongData");
     }
 
     public static String password() {
         return properties.getProperty("password");
+    }
+
+
+    public static String twiter() {
+        return properties.getProperty("twiterPage");
+    }
+
+    public static String facebook() {
+        return properties.getProperty("facebookPage");
     }
 
     public static String firstNameOfUser() {
@@ -41,6 +54,10 @@ public class ReadProperties {
 
     public static String zipCode() {
         return properties.getProperty("zip");
+    }
+
+    public static String success () {
+        return properties.getProperty("successfulCheckedOut");
     }
 
     public static boolean isHeadless() {
