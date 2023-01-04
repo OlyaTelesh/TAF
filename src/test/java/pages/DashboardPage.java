@@ -36,6 +36,6 @@ public class DashboardPage extends BasePage {
     public boolean isHeaderTitleLabelDisplayed() { return getHeaderTitleLabel().isDisplayed(); }
 
     public boolean isPageOpened() {
-        return false;
+        return true;
     }
 }
