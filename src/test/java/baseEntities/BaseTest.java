@@ -1,11 +1,7 @@
 package baseEntities;
 
 import configuration.ReadProperties;
-import io.qameta.allure.Attachment;
 import io.qameta.allure.Description;
-import org.openqa.selenium.NoSuchSessionException;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -26,33 +22,15 @@ public class BaseTest {
     @Description("Настройка")
     public void setUp(ITestContext iTestContext) {
         driver = new BrowsersService().getDriver();
-        // Solution 1
         iTestContext.setAttribute("driver", driver);
-        // Solution 1 - Finish
 
         driver.get(ReadProperties.getUrl());
 
         loginStep = new LoginStep(driver);
     }
 
-
     @AfterMethod(description = "Завершение")
     public void tearDown(ITestResult testResult) {
-        // Плохое решение - потому, что Screenshot добавляется в шаг TearDown
-
-        if (testResult.getStatus() == ITestResult.FAILURE) {
-            try {
-                byte[] srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-                saveScreenshot(srcFile);
-            } catch (NoSuchSessionException ex) {
-            }
-        }
-
         driver.quit();
-    }
-
-    @Attachment(value = "Page screenshot", type = "image/png")
-    private byte[] saveScreenshot(byte[] screenshot) {
-        return screenshot;
     }
 }
